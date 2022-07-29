@@ -8,7 +8,7 @@ app.use(express.json());
 const generateUrl = (apiKey) => `http://api.scraperapi.com?api_key=${apiKey}&autoparse=true`
 
 app.get('/', (_, res) => {
-    res.status(200).send('Welcome to MyCEP API!');
+    res.status(200).json({message: 'Welcome to MyCEP API!'});
 })
 
 //GET My CEP
